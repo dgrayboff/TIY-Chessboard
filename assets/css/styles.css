@@ -34,7 +34,7 @@ table {
   box-sizing: border-box; }
 
 #wrapper {
-  max-width: 650px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto; }
   #wrapper:after {
@@ -43,7 +43,15 @@ table {
     clear: both; }
 
 body {
-  background-color: darkred; }
+  background-color: darkred;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter; }
+
+h1 {
+  color: #FFF;
+  font-size: 36px;
+  text-align: center;
+  padding: 15px 0 0 0; }
 
 .content {
   width: 7.56303%;
@@ -51,10 +59,10 @@ body {
   margin-right: 0.84034%;
   padding: 22px;
   margin: 0;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   font-size: 20px;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   color: #FFF; }
 
 .toplabel {

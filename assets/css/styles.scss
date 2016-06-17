@@ -17,7 +17,7 @@ $boardwidth: 100%;
 
 $susy: (
   columns: 24,
-  container: 650px,
+  container: 600px,
   global-box-sizing: border-box
   );
 
@@ -36,16 +36,25 @@ $susy: (
 
 body {
   background-color: darkred;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 36px;
+  text-align: center;
+  padding: 15px 0 0 0;
 }
 
 .content { // BOARD SQUARES //
   @include span(2);
   padding: 22px;
   margin: 0;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   font-size: 20px;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;;
   color: #FFF;
 }
 
