@@ -8,7 +8,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 ///  VARIABLES ///
 
 $squareA: #B9453F;
-$squareB: #E9C382;
+$squareB: #E9C395;
 $boardwidth: 100%;
 
 //////////////////
@@ -34,7 +34,9 @@ $susy: (
 // width: $boardwidth;
 // }
 
-
+body {
+  background-color: darkred;
+}
 
 .content { // BOARD SQUARES //
   @include span(2);
@@ -42,6 +44,9 @@ $susy: (
   margin: 0;
   width: 65px;
   height: 65px;
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #FFF;
 }
 
 .toplabel {
@@ -65,6 +70,20 @@ $susy: (
 .square2 {
   background-color: $squareB;
   text-align: center;
+}
+
+img {
+  width: auto;
+  padding: 0px 25px 40px 0px;
+}
+
+.controlcenter {
+  text-align: center;
+}
+
+button {
+  height: 20px;
+  width: 25px;
 }
 
 // .toplabel {

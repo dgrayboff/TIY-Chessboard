@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Chessboard</title>
   </head>
@@ -10,14 +11,6 @@
   <body>
     <main id='wrapper'>
       <div class='gameboard'>
-        <!-- <aside class="sidelabel">8</aside>
-        <aside class="sidelabel">7</aside>
-        <aside class="sidelabel">6</aside>
-        <aside class="sidelabel">5</aside>
-        <aside class="sidelabel">4</aside>
-        <aside class="sidelabel">3</aside>
-        <aside class="sidelabel">2</aside>
-        <aside class="sidelabel">1</aside> -->
 
         <section class="content toplabel"></section>
         <section class="content toplabel">a</section>
@@ -31,25 +24,25 @@
         <section class="content toplabel"></section>
 
         <section class="content leftlabel">8</section>
-        <section class="content square2">R</section>
-        <section class="content square1">N</section>
-        <section class="content square2">B</section>
-        <section class="content square1">Q</section>
-        <section class="content square2">K</section>
-        <section class="content square1">B</section>
-        <section class="content square2">N</section>
-        <section class="content square1">R</section>
+        <section class="content square2"><img src="images/png/rook.png"/></section>
+        <section class="content square1"><img src="images/png/knight.png"/></section>
+        <section class="content square2"><img src="images/png/bishop.png"/></section>
+        <section class="content square1"><img src="images/png/queen.png"/></section>
+        <section class="content square2"><img src="images/png/king.png"/></section>
+        <section class="content square1"><img src="images/png/bishop.png"/></section>
+        <section class="content square2"><img src="images/png/knight.png"/></section>
+        <section class="content square1"><img src="images/png/rook.png"/></section>
         <section class="content rightlabel">8</section>
 
         <section class="content leftlabel">7</section>
-        <section class="content square1">P</section>
-        <section class="content square2">P</section>
-        <section class="content square1">P</section>
-        <section class="content square2">P</section>
-        <section class="content square1">P</section>
-        <section class="content square2">P</section>
-        <section class="content square1">P</section>
-        <section class="content square2">P</section>
+        <section class="content square1"><img src="images/png/pawn.png"/></section>
+        <section class="content square2"><img src="images/png/pawn.png"/></section>
+        <section class="content square1"><img src="images/png/pawn.png"/></section>
+        <section class="content square2"><img src="images/png/pawn.png"/></section>
+        <section class="content square1"><img src="images/png/pawn.png"/></section>
+        <section class="content square2"><img src="images/png/pawn.png"/></section>
+        <section class="content square1"><img src="images/png/pawn.png"/></section>
+        <section class="content square2"><img src="images/png/pawn.png"/></section>
         <section class="content rightlabel">7</section>
 
         <section class="content leftlabel">6</section>
@@ -97,25 +90,25 @@
         <section class="content rightlabel">3</section>
 
         <section class="content leftlabel">2</section>
-        <section class="content square2">p</section>
-        <section class="content square1">p</section>
-        <section class="content square2">p</section>
-        <section class="content square1">p</section>
-        <section class="content square2">p</section>
-        <section class="content square1">p</section>
-        <section class="content square2">p</section>
-        <section class="content square1">p</section>
+        <section class="content square2"><img src="images/png/pawn2.png"/></section>
+        <section class="content square1"><img src="images/png/pawn2.png"/></section>
+        <section class="content square2"><img src="images/png/pawn2.png"/></section>
+        <section class="content square1"><img src="images/png/pawn2.png"/></section>
+        <section class="content square2"><img src="images/png/pawn2.png"/></section>
+        <section class="content square1"><img src="images/png/pawn2.png"/></section>
+        <section class="content square2"><img src="images/png/pawn2.png"/></section>
+        <section class="content square1"><img src="images/png/pawn2.png"/></section>
         <section class="content rightlabel">2</section>
 
         <section class="content leftlabel">1</section>
-        <section class="content square1">r</section>
-        <section class="content square2">n</section>
-        <section class="content square1">b</section>
-        <section class="content square2">q</section>
-        <section class="content square1">k</section>
-        <section class="content square2">b</section>
-        <section class="content square1">n</section>
-        <section class="content square2">r</section>
+        <section class="content square1"><img src="images/png/rook2.png"/></section>
+        <section class="content square2"><img src="images/png/knight2.png"/></section>
+        <section class="content square1"><img src="images/png/bishop2.png"/></section>
+        <section class="content square2"><img src="images/png/queen2.png"/></section>
+        <section class="content square1"><img src="images/png/king2.png"/></section>
+        <section class="content square2"><img src="images/png/bishop2.png"/></section>
+        <section class="content square1"><img src="images/png/knight2.png"/></section>
+        <section class="content square2"><img src="images/png/rook2.png"/></section>
         <section class="content rightlabel">1</section>
 
         <section class="content bottomlabel"></section>
@@ -128,6 +121,10 @@
         <section class="content bottomlabel">g</section>
         <section class="content bottomlabel">h</section>
         <section class="content bottomlabel"></section>
+
+        <div class="controlcenter">
+          <button id="backwards"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+          <button id="forwards"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 
     </div>
     </main>
