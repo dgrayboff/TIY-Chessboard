@@ -44,14 +44,15 @@ table {
 
 body {
   background-color: darkred;
-  font-family: Helvetica, sans-serif;
+  font-family: "Josefin Sans", Helvetica, sans-serif;
   font-weight: lighter; }
 
 h1 {
   color: #FFF;
-  font-size: 36px;
+  font-size: 38px;
   text-align: center;
-  padding: 15px 0 0 0; }
+  padding: 15px 0 0 0;
+  font-weight: 700; }
 
 .content {
   width: 7.56303%;
@@ -62,7 +63,7 @@ h1 {
   width: 60px;
   height: 60px;
   font-size: 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: "Josefin Sans", Helvetica, sans-serif;
   color: #FFF; }
 
 .toplabel {
@@ -85,7 +86,8 @@ h1 {
 
 img {
   width: auto;
-  padding: 0px 25px 40px 0px; }
+  padding: 0px 25px 40px 0px;
+  text-align: center; }
 
 .controlcenter {
   text-align: center; }
