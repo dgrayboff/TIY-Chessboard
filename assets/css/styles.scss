@@ -85,7 +85,7 @@ h1 {
 
 img {
   width: auto;
-  padding: 0px 25px 40px 0px;
+  padding: 0px 30px 50px 0px;
   text-align: center;
 }
 
@@ -96,7 +96,17 @@ img {
 button {
   height: 20px;
   width: 25px;
+  background-color: $squareB;
+  border: none;
+  border-radius: 1px;
+  // border: 1px solid $squareA;
 }
+
+button:active {
+ background-color: $squareA;
+ }
+
+
 
 // .toplabel {
 //   background-color: gray;
