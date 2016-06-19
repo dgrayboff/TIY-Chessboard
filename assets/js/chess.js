@@ -43,6 +43,7 @@ var bb2 = $('.blackbishop2');
 var blank8 = $('.blank8');
 var gk2 = $('.goldknight2');
 var blank9 = $('.blank9');
+var blanktest = $('.blanktest');
 
 //////////////////////////////
 
@@ -60,92 +61,109 @@ var blank9 = $('.blank9');
 ////////////////////////////
 
 
-  $('.forwards').on('click', function() {
-
+  $('.forwards').on('click', function(e) {
     count++;
+    e.preventDefault;
 
     if (count == 1) {
 
       console.log("Click forwards");
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[4][3] = board[6][3];
       board[6][3] = ' ';
       console.log(board.join('\n'));
-      board.join('\n');
-      blank1.append(gp4);
+      var move1 = board[4][3];
+      blank1.append(move1);
       console.log("First move");
     };
 
     if (count == 2) {
 
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[2][5] = board[0][6];
       board[0][6] = ' ';
       console.log(board.join('\n'));
-      board.join('\n');
-      blank2.append(bk2);
+      var move2 = board[2][5];
+      blank2.append(move2);
       console.log("Second move");
     };
 
     if (count == 3) {
 
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[4][2] = board[6][2];
       board[6][2] = ' ';
       console.log(board.join('\n'));
-      board.join('\n');
-      blank3.append(gp3);
+      var move3 = board[4][2];
+      blank3.append(move3);
       console.log("Third move");
     };
 
     if (count == 4) {
 
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[2][4] = board[1][4];
       board[1][4] = ' ';
       console.log(board.join('\n'));
-      board.join('\n');
-      blank4.append(bp5);
+      var move4 = board[2][4];
+      blank4.append(move4);
       console.log("Fourth move");
     };
 
     if (count == 5) {
 
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[5][6] = board[6][6];
       board[6][6] = ' ';
       console.log(board.join('\n'));
-      board.join('\n');
-      blank5.append(gp7);
+      var move5 = board[5][6];
+      blank5.html(move5);
+
+      gp7.html(" ");
       console.log("Fifth move");
     };
 
     if (count == 6) {
 
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[3][3] = board[1][3];
       board[1][3] = ' ';
       console.log(board.join('\n'));
-      board.join('\n');
-      blank6.append(bp4);
+      var move6 = board[3][3];
+      blank6.append(move6);
       console.log("Sixth move");
     };
 
+
+
     if (count == 7) {
 
-      board.join('\n') + '\n\n';
-      board[6][6] = board[7][5];
-      board[7][5] = ' ';
-      console.log(board.join('\n'));
-      board.join('\n');
-      blank7.append(gb2);
+      var boardTwo = [
+        ['R','N','B','Q','K',bb2,bk2,'R'],
+        ['P','P','P',bp4,bp5,'P','P','P'],
+        [' ',' ',' ',' ',blank5,blank2,' ',' '],
+        [' ',' ',' ',blank6,' ',' ',' ',' '],
+        [' ',' ',blank3,blank1,' ',' ',' ',' '],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        ['p','p',gp3,gp4,'p','p',blank7,'p'],
+        ['r','n','b','q','k',gb2,'test','r'] ];
+
+      console.log(boardTwo.join('\n') + '\n\n');
+      boardTwo[6][6] = boardTwo[7][5];
+      boardTwo[7][5] = ' ';
+      console.log(boardTwo.join('\n'));
+      console.log(gp7);
+      var move7 = boardTwo[6][6];
+      blank7.html("<img src='images/png/bishop2.png'/>");
+      // blank7.html(gb2);
+      // blank7.append(board[6][6]);
       // gp7.append(gb2);
       console.log("Seventh move");
     };
 
     if (count == 8) {
 
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[1][4] = board[0][5];
       board[0][5] = ' ';
       console.log(board.join('\n'));
@@ -156,12 +174,12 @@ var blank9 = $('.blank9');
 
     if (count == 9) {
 
-      board.join('\n') + '\n\n';
+      console.log(board.join('\n') + '\n\n');
       board[5][5] = board[7][6];
       board[7][6] = ' ';
       console.log(board.join('\n'));
-      board.join('\n');
-      blank9.html(gk2);
+      var move9 = board[5][5];
+      blank9.html(move9);
       console.log("Ninth move");
     };
 
