@@ -75,7 +75,20 @@ var blanktest = $('.blanktest');
       var move1 = board[4][3];
       blank1.append(move1);
       console.log("First move");
+
+        $('.backwards').on('click', function(e) {
+          if (count == 1 ){
+          // blank1.remove();
+          blank1.empty(); // empties the square of the previous move
+          gp4.append(); // try to append original html here
+          // gp4.append(move1);
+          console.log("reverse");
+        }
+        });
+
+
     };
+
 
     if (count == 2) {
 
@@ -182,11 +195,30 @@ var blanktest = $('.blanktest');
       blank9.html(move9);
       console.log("Ninth move");
     };
-
-
-
-
-
-
-
   });
+
+// BACKWARDS CLICK //
+
+// var countback = 0;
+//
+// $('.backwards').on('click', function(e) {
+//   countback++;
+//   e.preventDefault;
+//
+//     // if (countback == 1) {
+//     //   console.log("Back click");
+//     //   board[6][3] = board[4][3];
+//     //   board[4][3] = ' ';
+//     //   var moveback1 = board[6][3];
+//     //   gp4.append(moveback1);
+//     // };
+//
+//     console.log("Back Click");
+//     console.log(board.join('\n') + '\n\n');
+//     board[4][3] = board[6][3];
+//     board[6][3] = ' ';
+//     console.log(board.join('\n'));
+//     var move1 = board[4][3];
+//     blank1.remove(move1);
+//     console.log("First move");
+//   });
