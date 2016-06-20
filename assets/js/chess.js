@@ -208,7 +208,14 @@ var blanktest = $('.blanktest');
       var move9 = board[5][5];
       blank9.html(move9);
       console.log("Ninth move");
+      $('.forwards').unbind('click'); // so the count doesn't get above 9 and stop the backwards click from working //
+      console.log("end of the line!");
     };
+
+    //  if (count > 9) {
+    //    $('.forwards').unbind('click');
+    //    console.log("stop please");
+    //  }
   });
 
 
@@ -245,7 +252,7 @@ var blanktest = $('.blanktest');
           var back1 = board2[6][3];
           blank1 = ' ';
           $('.goldpawn4b').html(back1); // does the trick, calling div instead of img
-          console.log("reverse");
+          console.log("reverse one");
         }
 
         if (count == 2 ){
@@ -310,7 +317,115 @@ var blanktest = $('.blanktest');
 
           var back9 = board2[7][6];
           $('.goldknightb').html(back9);
-          console.log("reverse");
+          console.log("reverse nine");
         }
 
 });
+
+$('.rewind').on('click', function(e) {
+  e.preventDefault;
+
+  count = 0;
+  console.log('rewind');
+
+  var back1 = board2[6][3];
+  blank1 = ' ';
+  $('.goldpawn4b').html(back1);
+
+  var back2 = board2[0][6];
+  // blank2 = ' ';
+  $('.knight2').html(back2);
+
+  var back3 = board2[6][2];
+  $('.pawn3b').html(back3);
+
+  var back4 = board2[1][4];
+  $('.pawn5b').html(back4);
+
+  var back5 = board2[6][6];
+  $('.seventh').html(back5);
+
+  var back6 = board2[1][3];
+  $('.blackpawn4b').html(back6);
+
+  var back7 = board2[7][5];
+  $('.fifth').html(back7);
+
+  var back8 = board2[0][5];
+  $('.blackbishopb').html(back8);
+
+  var back9 = board2[7][6];
+  $('.goldknightb').html(back9);
+
+});
+
+
+$('.fastforwards').on('click', function(e) {
+  e.preventDefault;
+
+  console.log("fast forwards");
+
+  board[4][3] = board[6][3];
+  board[6][3] = ' ';
+  var move1 = board[4][3];
+  blank1.append(move1);
+  console.log('ff1');
+
+  board[2][5] = board[0][6];
+  board[0][6] = ' ';
+  var move2 = board[2][5];
+  blank2.append(move2);
+  console.log('ff2');
+
+  board[4][2] = board[6][2];
+  board[6][2] = ' ';
+  var move3 = board[4][2];
+  blank3.append(move3);
+  console.log('ff3');
+
+  board[2][4] = board[1][4];
+  board[1][4] = ' ';
+  var move4 = board[2][4];
+  blank4.append(move4);
+  console.log('ff4');
+
+  board[5][6] = board[6][6];
+  board[6][6] = ' ';
+  var move5 = board[5][6];
+  blank5.append(move5);
+  console.log('ff5');
+
+  board[3][3] = board[1][3];
+  board[1][3] = ' ';
+  var move6 = board[3][3];
+  blank6.append(move6);
+  console.log('ff6');
+
+  board[6][6] = board[7][5];
+  board[7][5] = ' ';
+  var move7 = board[6][6];
+  $('.seventh').append(move7);
+  console.log('ff7');
+
+  board[1][4] = board[0][5];
+  board[0][5] = ' ';
+  var move8 = board[1][4];
+  $('.eight').append(move8);
+  console.log('ff8');
+
+  board[5][5] = board[7][6];
+  board[7][6] = ' ';
+  var move9 = board[5][5];
+  blank9.html(move9);
+  console.log('ff9');
+
+});
+  // var board = [
+  //   ['R','N','B','Q','K',bb2,bk2,'R'],
+  //   ['P','P','P',bp4,bp5,'P','P','P'],
+  //   [' ',' ',' ',' ',blank5,blank2,' ',' '],
+  //   [' ',' ',' ',blank6,' ',' ',' ',' '],
+  //   [' ',' ',blank3,blank1,' ',' ',' ',' '],
+  //   [' ',' ',' ',' ',' ',' ',' ',' '],
+  //   ['p','p',gp3,gp4,'p','p',gp7,'p'],
+  //   ['r','n','b','q','k',gb2,gk2,'r'] ];
